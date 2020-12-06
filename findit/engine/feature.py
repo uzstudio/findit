@@ -117,7 +117,7 @@ class FeatureEngine(FindItEngine):
 
         good = list()
         if matches:
-            good = matches[0]
+            good = matches
 
         # get positions
         point_list = list()
