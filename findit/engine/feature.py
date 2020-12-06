@@ -103,7 +103,7 @@ class FeatureEngine(FindItEngine):
 
         bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
         # 特征描述子匹配
-        matches = bf.knnMatch(template_desc, target_desc, k=1)
+        matches = bf.knnMatch(template_desc, target_desc, k=4)
 
         # matches are something like:
         # [[<DMatch 0x12400a350>, <DMatch 0x12400a430>], [<DMatch 0x124d6a170>, <DMatch 0x124d6a450>]]
