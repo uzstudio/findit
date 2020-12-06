@@ -108,7 +108,7 @@ class FeatureEngine(FindItEngine):
         # matches are something like:
         # [[<DMatch 0x12400a350>, <DMatch 0x12400a430>], [<DMatch 0x124d6a170>, <DMatch 0x124d6a450>]]
 
-        logger.debug(f"matches num: {len(matches)}")
+        logger.error(f"matches num: {len(matches)}")
 
         # TODO here is a sample to show feature points
         # temp = cv2.drawMatchesKnn(template_pic_object, kp1, target_pic_object, kp2, matches, None, flags=2)
@@ -117,7 +117,7 @@ class FeatureEngine(FindItEngine):
 
         good = list()
         if matches:
-            good = matches
+            good = matches[0]
 
         # get positions
         point_list = list()
